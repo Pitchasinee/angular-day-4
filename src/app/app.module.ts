@@ -8,6 +8,8 @@ import { HeaderProfileComponent } from './header-profile/header-profile.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostComponent } from './post/post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const route: Route[] = [
   {
@@ -37,7 +39,8 @@ const route: Route[] = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(route)
+    RouterModule.forRoot(route),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
